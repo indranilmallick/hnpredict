@@ -1,0 +1,8 @@
+Model last updated: 2021-08-19 22:47:45.893610 
+Number of training cases: 587 
+Cox proportional hazards regression model 
+Model indices: 
+DFS c-index: 0.7505755237555384 
+LRC c-index: 0.7130571879031102 
+DMFS c-index: 0.7970394637061303 
+OS c-index: 0.7753628252614905 
