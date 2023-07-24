@@ -151,7 +151,7 @@ st.title('Predicted outcomes')
 col3, col4 = st.columns(2)
 with col3:
     st.header('Survival Probabilities over 5 years')
-    st.table(times.style.set_precision(2))
+    st.table(times.style.format(precision=2))
     st.write('DFS: Disease-free survival; LRC: Locoregional Control')
     st.write('DMFS: Distant-metastasis-free survival; OS: Overall survival')
 with col4:
