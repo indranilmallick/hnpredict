@@ -25,14 +25,6 @@ def getmodels():
     osmodel = pickle.load(open('oscoxmodel.pkl', 'rb'))
     return dfsmodel, lrcmodel, mfsmodel, osmodel
 
-@st.cache
-def getmodels2():
-    dfsmodel = pd.read_pickle('dfscoxmodel.pkl')
-    lrcmodel = pd.read_pickle('lrccoxmodel.pkl')
-    mfsmodel = pd.read_pickle('mfscoxmodel.pkl')
-    osmodel = pd.read_pickle('oscoxmodel.pkl')
-    return dfsmodel, lrcmodel, mfsmodel, osmodel
-
 st.set_page_config(page_title="PREDICT-OR", page_icon=":microscope:", layout="wide", initial_sidebar_state="expanded")
 st.title('PREDICT-OR: Oral Cancer Dynamic Outcome Prediction Model')
 
@@ -56,7 +48,7 @@ st.sidebar.write(Lines[0])
 #st.sidebar.header('This tool is under clinical peer review and should not yet be used to counsel patients.')
 
 #st.write('Loading Models')
-dfsmodel, lrcmodel, mfsmodel, osmodel = getmodels2()
+dfsmodel, lrcmodel, mfsmodel, osmodel = getmodels()
 #st.write('Models loaded successfully')
 
 
